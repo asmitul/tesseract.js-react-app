@@ -8,9 +8,9 @@ function App() {
   });
   const doOCR = async () => {
     await worker.load();
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
-    const { data: { text } } = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
+    await worker.loadLanguage('uig');
+    await worker.initialize('uig');
+    const { data: { text } } = await worker.recognize('https://dh7pcxiz5gws2.cloudfront.net/scripturepictures/uig.png');
     setOcr(text);
   };
   const [ocr, setOcr] = useState('Recognizing...');
